@@ -41,6 +41,9 @@ server {
         }
 }
 
+# 配置完成后重启 Nginx
+service nginx restart
+
 ```
 # 测试 
 ```
