@@ -29,9 +29,9 @@ server {
 	server_name _;    # 或者换成域名、IP
 
 	location ~ \.php$ {
-    try_files $uri = 404;
+        try_files $uri = 404;
 		fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
-    fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;
+                fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;
 		fastcgi_index index.php;
 		include fastcgi_params;
 	}
