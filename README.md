@@ -17,8 +17,10 @@ chmod 777 -R /data/webhook/console.log
 
 ```
 
-# Nginx 配置示例 修改 /etc/nginx/sites-available的 default 文件
+# Nginx 配置示例 
 ```
+# 修改 /etc/nginx/sites-available的 default 文件
+
 server {
 	listen 18000;     # 监听端口
 
@@ -40,8 +42,10 @@ server {
 }
 
 ```
-# 测试 浏览器请求
+# 测试 
 ```
+
+// 浏览器请求
 http://[域名或IP]:18000/?token=7b6a7a9c8066859f69ee5019b3675869&type=aliyun_code
 ```
 
