@@ -15,6 +15,8 @@ sudo apt-get install nginx
 // 在index.php 文件的目录下添加文件 console.log，权限设置为 777
 chmod 777 -R /data/webhook/console.log 
 
+// 权限异常可以查看此文件 /var/log/auth.log
+
 ```
 
 # Nginx 配置示例 
@@ -24,8 +26,8 @@ chmod 777 -R /data/webhook/console.log
 server {
 	listen 18000;     # 监听端口
 
-	root /data/webhook;
-	index index.php;
+	root /data/webhook;	# 代码路径
+	index index.php;  # 入口文件
 	server_name _;    # 或者换成域名、IP
 
 	location ~ \.php$ {
@@ -45,11 +47,13 @@ server {
 service nginx restart
 
 ```
+
 # 测试 
 ```
-
 // 浏览器请求
-http://[域名或IP]:18000/?token=7b6a7a9c8066859f69ee5019b3675869&type=aliyun_code
+http://[域名或IP]:18000/?token=7b6a7a9c8066859f69ee5019b3675869&type=code
 ```
+
+
 
 
