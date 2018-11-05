@@ -17,6 +17,8 @@ chmod 777 -R /data/webhook/console.log
 
 // 权限异常可以查看此文件 /var/log/auth.log
 
+// 根据需要修改 index.php 文件内的 $config 配置即可
+
 ```
 
 # Nginx 配置示例 
