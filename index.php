@@ -19,8 +19,8 @@ $type = $_REQUEST['type'];
 
 // 配置执行的 shell 脚本
 $config = [
-    'aliyun_code' => 'cd /data/shell && sh test_git.sh',
-    'aliyun_docker' => 'cd /data/shell && sh test_docker.sh'
+    'code' => 'sh code.sh',
+    'docker' => 'cd /data/shell && sh docker.sh'
 ];
 
 // 简单 token 验证，根据需要修改
