@@ -35,11 +35,13 @@ $config = [
 // 简单 token 验证，根据需要修改
 if ($token !== '7b6a7a9c8066859f69ee5019b3675869') {
     console('error token ' . $token);
+	echo date('Y-m-d H:i:s') + ' error token';
 	end_line();
 }
 
 if (!$type || !$config[$type]) {
     console('error type ' . $type);
+	echo date('Y-m-d H:i:s') + ' error type';
 	end_line();
 }
 
@@ -47,7 +49,7 @@ if (function_exists('shell_exec')) {
     $output = shell_exec($config[$type]);
     console($output);
     console($_SERVER['REMOTE_ADDR'] . ":" . $_SERVER['REMOTE_PORT'] . " " . $_SERVER['REQUEST_URI']);
-	echo 'success';
+	echo date('Y-m-d H:i:s') + ' success';
 	end_line();
 }
 

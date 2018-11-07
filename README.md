@@ -16,6 +16,9 @@ sudo apt-get install nginx
 chmod 777 -R /data/webhook/console.log 
 
 // 权限异常可以查看此文件 /var/log/auth.log
+// 发现有报错 www-data : user NOT in sudoers 
+// 打开文件 /etc/sudoers 
+// 追加内容： www-data   ALL=(ALL)      NOPASSWD:ALL
 
 // 根据需要修改 index.php 文件内的 $config 配置即可
 
