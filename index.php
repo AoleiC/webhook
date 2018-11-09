@@ -26,10 +26,10 @@ $type = $_REQUEST['type'];
 
 console(json_encode($_SERVER));
 
-// 配置执行的 shell 脚本
+// 配置执行的 shell 脚本，并输出到标准输出
 $config = [
-    'code' => 'sh test.sh',
-    'docker' => 'cd /data/shell && sh docker.sh'
+    'code' => 'sh test.sh 2>&1',
+    'docker' => 'cd /data/shell && sh docker.sh 2>&1'
 ];
 
 // 简单 token 验证，根据需要修改
